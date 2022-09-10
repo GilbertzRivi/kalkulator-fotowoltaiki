@@ -4,9 +4,9 @@ month_eff = [(-(1/5)*(x-5.5)**2+7)/2 for x in range(12)]
 month_eff = [month/sum(month_eff) for month in month_eff]
 months = ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień']
 
-declared_power = int(input('Podaj moc paneli w kilowatach: '))
+declared_power = int(input('Podaj moc paneli w watach: '))
 
-year_power = declared_power*1000
+year_power = declared_power
 month_power = [year_power*month_eff[i] for i in range(12)]
 
 hourly_power = [month/30.5/24*1000 for month in month_power]
